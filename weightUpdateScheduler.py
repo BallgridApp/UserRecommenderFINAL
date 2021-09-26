@@ -18,8 +18,5 @@ def checkUpdateDaily():
             UW.updateWeights(df.index.values[i])
         flag = False
 
-def UpdateWeekly():
-    for i in range(0, df.shape[0]):
-        UW.updateWeights(df.index.values[i])
 
-        
+#fauna integration, record timestamps during checkUpdateDaily. Integration to SQL

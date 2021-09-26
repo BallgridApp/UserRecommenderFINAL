@@ -3,13 +3,18 @@ import numpy as np
 from pandas.core.algorithms import value_counts
 import faunadb as f
 
+df = pd.read_csv('SampleUserMatrix.csv')
+df['UID'] = df.columns.values
+df = df.set_index('UID')
+df.columns = df.columns.map(str)
+df.index = df.index.map(str)
+df2 = pd.read_csv('InactiveUsers.csv')
+inactiveUsers = df2['Users']
+
 def updateWeights(user):
-    df = pd.read_csv('SampleUserMatrix.csv')
-    df['UID'] = df.columns.values
-    df = df.set_index('UID')
-    df.columns = df.columns.map(str)
-    df.index = df.index.map(str)
     for i in df.loc[user]:
+        if df.columns[i] in inactiveUsers:
+            continue
         value = generateWeight(df.columns[i], user)
         i = value
     df.to_csv('SampleUserMatrix.csv', index=False)
@@ -90,4 +95,4 @@ def FrequentLocations(target, user):
 
 
 
-#favoriteSports, levelOfCompetition, Friends, Location, FrequentLocations)
+#favoriteSports, levelOfCompetition, Friends, Location, FrequentLocations, Age, Gender)

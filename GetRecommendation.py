@@ -11,6 +11,7 @@ df.index = df.index.map(str)
 
 user = '201583'
 
+print(df)
 
 def giveRecommendation(user):
     arrayRecommendations = []
@@ -19,6 +20,7 @@ def giveRecommendation(user):
     for i in range(0, len(recommendations)):
         arrayRecommendations.append((recommendations[i], df.columns[i]))
     arrayRecommendations.sort(reverse=True)
+    print(arrayRecommendations)
     Users = []
     for x in range(0, len(arrayRecommendations)):
         Users.append(arrayRecommendations[x][1])
@@ -26,6 +28,7 @@ def giveRecommendation(user):
     # for p in friends:
         # Users.remove(p)
     UserRecommended = Users[0]
+    print(Users)
     return UserRecommended
 
 def rejection(user, target):
