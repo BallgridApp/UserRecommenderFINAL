@@ -2,8 +2,10 @@ import pandas as pd
 import numpy as np
 from pandas.core.algorithms import value_counts
 import faunadb as f
+import json
+json.read('JSONMockUsers1.json')
 
-df = pd.read_csv('SampleUserMatrix.csv')
+df = pd.read_csv('UserMatrix.csv')
 df['UID'] = df.columns.values
 df = df.set_index('UID')
 df.columns = df.columns.map(str)
@@ -17,7 +19,7 @@ def updateWeights(user):
             continue
         value = generateWeight(df.columns[i], user)
         i = value
-    df.to_csv('SampleUserMatrix.csv', index=False)
+    df.to_csv('UserMatrix.csv', index=False)
 
 def generateWeight(target, user):
     value = 0
@@ -29,10 +31,8 @@ def generateWeight(target, user):
 
 def favoriteSports(target, user):
     s = 0
-    sportsuser = ['Tennis', 'Soccer', 'Football']
-    sportstarget = ['Basketball', 'Tennis', 'Football', 'Rugby', 'Sped']
-    #sportsuser = f.Get(f.Ref(f.Collection('users'), user).sports) or whatever bullshit fauna does to access UIDs
-    #sportstarget = f.Get(f.Ref(f.Collection('users'), target).sports) or whatever bullshit fauna does to access UIDs
+    sportsuser = ['Tennis', 'Soccer', 'Football'] # >>>>>
+    sportstarget = ['Basketball', 'Tennis', 'Football', 'Rugby', 'Sped'] #GET THESE USING JSON
     for i in sportsuser:
         for x in sportstarget:
             if i == x:

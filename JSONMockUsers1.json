@@ -1,0 +1,32 @@
+﻿{
+        "uid": 100001,
+        "firebaseId": "ExHkEDDoMbfgWQi3qQVm2jCa7qZ2",
+        "profilePicture": "https://googlecloudstorage.com/ballgridlol/1235292",
+        "username": "@Papito",
+        "realName": "Rahul Ravioli",
+        "bio": "Just a Sova main in a Duelist's world.",
+        "birthday": "2021-08-18T04:07:46.890Z",
+        "interests": {
+      "Basketball": [0.45, 0.7], 
+      "Rock Climbing": [0.65, 0,69]
+     },
+        "gender": "Non-Binary",
+        "friends": [111111, 222222, 333333, 444444, 555555, 666666, 777777, 888888, 999999],
+        "pendingFriendRequests": [21493091258, 325098],
+        "location": {
+            "lat": 310250,
+            "long": 44236
+        },
+     "rappor": {
+      "21340598": 0.65
+     },
+        "links": {
+            "youtube": "url",
+            "twitter": "url",
+            "onlyfans": "url"
+        },
+        "created": [12023, 1345023, 13590],
+     "viewed": ["3253", "235243"],
+    "notificationToken" : 2938420398402,
+    "frequentedLocation": ["32592", "4264306"]
+}

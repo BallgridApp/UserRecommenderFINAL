@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import UpdateWeights as UW
 
-df = pd.read_csv('SampleUserMatrix.csv')
+df = pd.read_csv('UserMatrix.csv')
 df['UID'] = df.columns.values
 df = df.set_index('UID')
 df.columns = df.columns.map(str)

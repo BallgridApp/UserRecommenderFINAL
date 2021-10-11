@@ -3,7 +3,7 @@ import numpy as np
 from pandas.core.construction import array
 import faunadb as f
 
-df = pd.read_csv('SampleUserMatrix.csv')
+df = pd.read_csv('UserMatrix.csv')
 df['UID'] = df.columns.values
 df = df.set_index('UID')
 df.columns = df.columns.map(str)
@@ -40,7 +40,7 @@ def rejection(user, target):
 
 rejection(user, '294835')
 
-df.to_csv('SampleUserMatrix.csv', index=False)
+df.to_csv('UserMatrix.csv', index=False)
 
 
 giveRecommendation(user)

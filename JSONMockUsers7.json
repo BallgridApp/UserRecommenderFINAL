@@ -1,0 +1,32 @@
+{
+        "uid": 666666,
+        "firebaseId": "ExHkEDDoMbfgWQi3qQVm2jCa7qZ2",
+        "profilePicture": "https://googlecloudstorage.com/ballgridlol/1235292",
+        "username": "@IronMan",
+        "realName": "Tony Stark",
+        "bio": "Fuck terrorists",
+        "birthday": "2021-08-18T04:07:46.890Z",
+        "interests": {
+      "Lacrosse": [0.9, 0.9], 
+      "Rock Climbing": [0.81, 0.23]
+     },
+        "gender": "Non-Binary",
+        "friends": [100001, 555555],
+        "pendingFriendRequests": [21493091258, 325098],
+        "location": {
+            "lat": 105617,
+            "long": 36272
+        },
+     "rappor": {
+      "21340598": 0.65
+     },
+        "links": {
+            "youtube": "url",
+            "twitter": "url",
+            "onlyfans": "url"
+        },
+        "created": [12023, 1345023, 13590],
+     "viewed": ["3253", "235243"],
+    "notificationToken" : 2938420398402,
+    "frequentedLocation": ["32592", "4264306"]
+    }

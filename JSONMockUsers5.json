@@ -1,0 +1,32 @@
+{
+        "uid": 444444,
+        "firebaseId": "ExHkEDDoMbfgWQi3qQVm2jCa7qZ2",
+        "profilePicture": "https://googlecloudstorage.com/ballgridlol/1235292",
+        "username": "@moneyman",
+        "realName": "Peter Parker",
+        "bio": "Spider bit me",
+        "birthday": "2021-08-18T04:07:46.890Z",
+        "interests": {
+      "Baseball": [0.89, 0.7], 
+      "Rock Climbing": [0.99, 0.99]
+     },
+        "gender": "Non-Binary",
+        "friends": [100001, 222222, 777777, 888888],
+        "pendingFriendRequests": [21493091258, 325098],
+        "location": {
+            "lat": 310927,
+            "long": 44278
+        },
+     "rappor": {
+      "21340598": 0.65
+     },
+        "links": {
+            "youtube": "url",
+            "twitter": "url",
+            "onlyfans": "url"
+        },
+        "created": [12023, 1345023, 13590],
+     "viewed": ["3253", "235243"],
+    "notificationToken" : 2938420398402,
+    "frequentedLocation": ["32592", "4264306"]
+    }

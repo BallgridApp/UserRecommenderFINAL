@@ -1,0 +1,34 @@
+{
+        "uid": 555555,
+        "firebaseId": "ExHkEDDoMbfgWQi3qQVm2jCa7qZ2",
+        "profilePicture": "https://googlecloudstorage.com/ballgridlol/1235292",
+        "username": "@Mall cop",
+        "realName": "Paul Blart",
+        "bio": "I’m fat",
+        "birthday": "2021-08-18T04:07:46.890Z",
+        "interests": {
+      "Soccer": [0.6, 0.4], 
+      "Football": [0.32, 0.79]
+     },
+        "gender": "Non-Binary",
+        "friends": [100001, 333333, 222222, 666666],
+        "pendingFriendRequests": [21493091258, 325098],
+        "location": {
+            "lat": 373961,
+            "long": 73826
+        },
+     "rappor": {
+      "21340598": 0.65
+     },
+        "links": {
+            "youtube": "url",
+            "twitter": "url",
+            "onlyfans": "url"
+        },
+        "created": [12023, 1345023, 13590],
+     "viewed": ["3253", "235243"],
+    "notificationToken" : 2938420398402,
+    "frequentedLocation": ["32592", "4264306"]
+    }
+    
+    
