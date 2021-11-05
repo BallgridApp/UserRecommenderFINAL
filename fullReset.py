@@ -10,6 +10,8 @@ df.index = df.index.map(str)
 
 def fullReset():
     for i in range(0, df.shape[0]):
-        UW.updateWeights(df.index.values[i])
+       UW.updateWeights(df.index.values[i])
 
+fullReset()
 
+# File Done

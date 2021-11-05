@@ -23,7 +23,7 @@ def checkInactiveWeekly():
 
 
 
-#Not Done
+#Not Done, need to work on with Desi
 
 
 
