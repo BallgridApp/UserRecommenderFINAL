@@ -20,6 +20,6 @@ def checkUpdateLogin(user):
         flag = False
 # done, working
 
-checkUpdateLogin('313209076380074563')
+checkUpdateLogin('314549908104282704')
 
-#overall: Timestamps, flask, publish API, deploy to computer
+#overall: publish API, deploy to computer

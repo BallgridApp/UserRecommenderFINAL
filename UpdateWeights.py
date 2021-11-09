@@ -7,6 +7,8 @@ from faunadb.client import FaunaClient
 import json
 import math
 
+from pandas.core.frame import DataFrame
+
 adminClient = FaunaClient(secret="fnAEVsNsPPACRXKB1RCH6UmlMwHCCEwut1rBXlEo")
 
 
@@ -35,11 +37,17 @@ inactiveUsers = df2['Users']
 def updateWeights(user):
     friendsuser = list(pullPost(user, 'friends'))
     for i in range(len(df.loc[user])):
-        if df.columns[i] in inactiveUsers:
-            continue
-        if df.columns[i] in friendsuser:
-            continue
+        value = 0
         value = generateWeight(df.columns.values[i], user)
+        if df.columns[i] in inactiveUsers: #fix this
+            value = -1
+        for x in range(len(friendsuser)):
+            if df.columns[i] == str(friendsuser[x]):
+                value = -1
+      #  if df.columns[i] in friendsuser: #fix this
+           # value = -1
+        if df.columns[i] == str(user):
+            value = -1
         df.loc[user, df.columns.values[i]] = value
     df.to_csv('UserMatrix.csv', index=False)
 
@@ -115,10 +123,25 @@ def Location(target, user):
     if (distance < 50000):
         return 0.1
     else:
-        return -1
+        return -0.2 # modifiable
 
-#updateWeights('313209404623159876')
-#updateWeights('305218380285084227')
+def createUser(ref):
+    df = pd.read_csv('UserMatrix.csv')
+    df['UID'] = df.columns.values
+    df = df.set_index('UID')
+    df.columns = df.columns.map(str)
+    df.index = df.index.map(str)
+    array = []
+    for i in range(0, len(df.columns.values)):
+        array.append(0)
+    df.loc[ref] = array
+    print(df)
+    updateWeights(ref)
+    df.to_csv('UserMatrix.csv', index=False)
+
+#createUser('135646374345341349')
+#updateWeights('314549764296278608')
+#updateWeights('314549764296278608')
 #updateWeights('313209076380074563')
 #updateWeights('313209568100352579')
 #updateWeights('313209725554524739')
@@ -129,7 +152,4 @@ def Location(target, user):
 #updateWeights('313210489732596291')
 
 
-
-#favoriteSports, levelOfCompetition, Friends, Location, FrequentLocations, Age, Gender)
-#finished
-#flask for API, upload to computer, open IP address, make sure schedulers work
+#test out pikachuuu

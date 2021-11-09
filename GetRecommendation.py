@@ -28,21 +28,18 @@ def giveRecommendation(user):
         # Users.remove(p)
     UserRecommended = Users[0]
     print(Users)
+    df.loc[user, Users[0]] = df.loc[user, Users[0]] - 0.2
     return UserRecommended
 
-def rejection(user, target):
-    df.loc[user, target] = df.loc[user, target] - 0.2
 # This will cause an eventual list of 0s for recommendation weights at which recommendations could be random, but if they're actively rejecting someone, this is just because we dont have enough users.
 # Current solution is to update weekly and when the values fall below a certain threshold
 
 #rejection(user, '294835')
 
-giveRecommendation('313209076380074563')
-rejection('313209076380074563', giveRecommendation('313209076380074563'))
+giveRecommendation('314549908104282704')
 
 
 df.to_csv('UserMatrix.csv', index=False)
 
 
 # File confirmed working
-# maybe get rid of friends from this?
